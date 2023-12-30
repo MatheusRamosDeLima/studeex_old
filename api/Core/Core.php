@@ -36,16 +36,11 @@
                 $paramethers = [];
             }
 
-            echo "<h1>Teste das variáveis CORE</h1>";
-            echo "<p>Controller: $controller</p>";
-            echo "<p>Method: $method</p>";
-            if (!empty($paramethers)) {
-                echo "<p>Paramethers:</p>";
-                echo "<ul>";
-                foreach ($paramethers as $i => $p) {
-                    echo "<li>paramether$i: $p</li>";
-                }
-                echo "</ul>";
+            try {
+                $callController = new $controller;
+                call_user_func_array(array($callController, $method), $paramethers);
+            } catch (\Throwable $e) {
+                call_user_func_array(array(new ErrorController, 'index'), []);
             }
         }
     }

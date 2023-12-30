@@ -1,7 +1,8 @@
 <?php
-    class ErrorController {
-        public function index() {
-            
+    class ErrorController extends Controller {
+        public function index():void {
+            $this->setTitle('Erro 404 - Studeex');
+            $this->loadTemplate('error');
         }
     }
 ?>
