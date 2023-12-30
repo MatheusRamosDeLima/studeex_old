@@ -1,16 +1,16 @@
 <?php
     class CriarController extends Controller {
-        private string $systemName;
+        private string $systemType;
 
         public function rotina():void {
-            $this->systemName = 'rotina';
+            $this->systemType = 'rotina';
             $this->setTitle('Criar rotina - Studeex');
-            $this->loadTemplate('criar/index', ['systemName' => $this->systemName]);
+            $this->loadTemplate('criar/index', ['systemType' => $this->systemType]);
         }
         public function ciclo():void {
-            $this->systemName = 'ciclo';
+            $this->systemType = 'ciclo';
             $this->setTitle('Criar ciclo - Studeex');
-            $this->loadTemplate('criar/index', ['systemName' => $this->systemName]);
+            $this->loadTemplate('criar/index', ['systemType' => $this->systemType]);
         }
     }
 ?>

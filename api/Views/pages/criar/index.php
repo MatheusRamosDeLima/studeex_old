@@ -1,5 +1,5 @@
-<?php $systemName = $this->getData()['systemName'] ?>
-<h1>Criar <?= $systemName ?></h1>
+<?php $systemType = $this->getData()['systemType'] ?>
+<h1>Criar <?= $systemType ?></h1>
 <form>
     <h2>Adicione conteúdos a sua lista:</h2>
     <div>
@@ -16,7 +16,7 @@
             <option class="difficulty-option">Muito ruim</option>
         </select>
     </div>
-    <?php $this->loadViewInTemplate("criar/$systemName") ?>
+    <?php $this->loadViewInTemplate("criar/$systemType") ?>
     <input type="button" value="Adicionar conteúdo">
 </form>
 <section>
@@ -24,7 +24,7 @@
     <table id="contents-table"></table>
 </section>
 <form action="">
-    <h2>Finalizar <?= $systemName ?></h2>
+    <h2>Finalizar <?= $systemType ?></h2>
     <div>
         <label for="input-hours-per-day">Quantidade de horas por dia para estudar:</label>
         <input type="number" name="hours-per-day" id="input-hours-per-day" min="1" max="8">

@@ -1,0 +1,1 @@
+<h1>Ciclo: <?= $this->getData()['systemTitle'] ?></h1>
