@@ -19,10 +19,10 @@
         </nav>
     </header>
     <main>
-
+        <?php $this->loadViewInTemplate($view, $modelData) ?>
     </main>
     <footer>
-
+        <p>Copyright, Studeex - 2024</p>
     </footer>
 </body>
 </html>
