@@ -9,12 +9,12 @@
         }
 
         protected function loadTemplate($view, $modelData = array()) {
-            require_once $_SERVER['DOCUMENT.ROOT'].'/api/Views/template.php';
+            require_once $_SERVER['DOCUMENT_ROOT'].'/api/Views/template.php';
         }
         protected function loadViewInTemplate($view, $modelData = array()) {
             if (count($this->data) > 0) array_push($this->data, $modelData);
             else $this->data = $modelData;
-            require_once $_SERVER['DOCUMENT.ROOT']."/api/Views/pages/$view.php";
+            require_once $_SERVER['DOCUMENT_ROOT']."/api/Views/pages/$view.php";
         }
 
         public function getData() {
