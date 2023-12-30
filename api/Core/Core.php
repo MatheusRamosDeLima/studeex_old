@@ -29,6 +29,13 @@
                 $paramethers = [];
             }
 
+            $controllerPath = $_SERVER['DOCUMENT_ROOT']."/api/Controllers/$controller.php";
+            if (!file_exists($controllerPath) || !method_exists($controller, $method)) {
+                $controller = 'ErrorController';
+                $method = 'index';
+                $paramethers = [];
+            }
+
             echo "<h1>Teste das variáveis CORE</h1>";
             echo "<p>Controller: $controller</p>";
             echo "<p>Method: $method</p>";

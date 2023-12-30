@@ -1,5 +1,5 @@
 <?php
-    class HomeController {
+    class ContatoController {
         public function index() {
             
         }

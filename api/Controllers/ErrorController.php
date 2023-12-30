@@ -1,5 +1,5 @@
 <?php
-    class HomeController {
+    class ErrorController {
         public function index() {
             
         }
