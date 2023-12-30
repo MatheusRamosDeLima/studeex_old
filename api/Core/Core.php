@@ -15,7 +15,7 @@
                 $controller = ucfirst(strtolower($uri[0])).'Controller';
                 array_shift($uri);
                 if (!empty($uri[0])) {
-                    $method = $uri[0];
+                    $method = strtolower($uri[0]);
                     array_shift($uri);
                     if (count($uri) > 0) $paramethers = $uri;
                     else $paramethers = [];
