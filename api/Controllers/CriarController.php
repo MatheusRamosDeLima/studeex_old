@@ -10,7 +10,7 @@
         public function ciclo():void {
             $this->systemName = 'ciclo';
             $this->setTitle('Criar ciclo - Studeex');
-            $this->loadTemplate('criar/index', [$this->systemName]);
+            $this->loadTemplate('criar/index', ['systemName' => $this->systemName]);
         }
     }
 ?>
