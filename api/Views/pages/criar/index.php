@@ -9,7 +9,8 @@
     <div>
         <label for="select-difficulties">O quão bom você é nesse conteúdo:</label>
         <select name="difficulties" id="select-difficulties">
-            <option class="difficulty-option" selected>Muito bom</option>
+            <option selected disabled>Selecione</option>
+            <option class="difficulty-option">Muito bom</option>
             <option class="difficulty-option">Bom</option>
             <option class="difficulty-option">Razoável</option>
             <option class="difficulty-option">Ruim</option>
