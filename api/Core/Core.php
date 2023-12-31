@@ -30,7 +30,7 @@
             }
 
             $controllerPath = $_SERVER['DOCUMENT_ROOT']."/api/Controllers/$controller.php";
-            if (!file_exists($controllerPath) || !method_exists($controller, $method)) {
+            if (!file_exists($controllerPath) || !method_exists($controller, $method) || method_exists('Controller', $method)) {
                 $controller = 'ErrorController';
                 $method = 'index';
                 $paramethers = [];
