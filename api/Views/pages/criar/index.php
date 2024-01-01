@@ -17,7 +17,7 @@
             <option class="difficulty-option">Muito ruim</option>
         </select>
     </div>
-    <?php $this->loadViewInTemplate("criar/$systemType") ?>
+    <?php $this->loadViewInTemplate("criar/$systemType", [$systemType.'_teste']) ?>
     <input type="button" value="Adicionar conteúdo">
 </form>
 <section>
@@ -31,3 +31,9 @@
         <input type="number" name="hours-per-day" id="input-hours-per-day" min="1" max="8">
     </div>
 </form>
+<?php
+    $data = $this->getData();
+    foreach ($data as $i => $d) {
+        echo "<p>$i -> $d</p>";
+    }
+?>
