@@ -33,7 +33,17 @@ header h1 {
     height: fit-content;
 }
 
-#menu-button, #menu-button::after, #menu-button:before {
+#menu-button {
+    left: 20px;
+    top: calc(var(--header-height) * 0.5);
+    position: absolute;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+#menu-button-line, #menu-button-line::after, #menu-button-line:before {
     display: block;
     background-color: #fff;
     position: absolute;
@@ -42,17 +52,12 @@ header h1 {
     border-radius: 2px;
 }
 
-#menu-button {
-    left: 20px;
-    top: calc(var(--header-height) * 0.5);
-}
-
-#menu-button::after {
+#menu-button-line::after {
     content: '';
     margin-top: 10px;
 }
 
-#menu-button::before {
+#menu-button-line::before {
     content: '';
     margin-top: -10px;
 }
