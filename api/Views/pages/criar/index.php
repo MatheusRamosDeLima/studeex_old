@@ -33,8 +33,5 @@
 </form>
 <?php
     $data = $this->getData();
-    foreach ($data as $i => $d) {
-        echo "<p>$i -> $d</p>";
-    }
-    echo $this->getData()['TipoDoSistema'];
+    print_r($data);
 ?>
