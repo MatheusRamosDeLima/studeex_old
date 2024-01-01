@@ -22,7 +22,7 @@
         <?php $this->loadViewInTemplate($view, $modelData) ?>
     </main>
     <footer>
-        <p>Copyright, Studeex - 2024</p>
+        <p id="copyright">Copyright, Studeex - 2024</p>
     </footer>
 </body>
 </html>
