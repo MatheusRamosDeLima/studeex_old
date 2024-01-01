@@ -3,3 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --header-height: 70px;
+    --footer-height: 40px;
+}
+
+header {
+    height: var(--header-height);
+}
+
+main {
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+}
+
+footer {
+    height: var(--footer-height);
+}
