@@ -37,29 +37,21 @@ header h1 {
     left: 20px;
     top: calc(var(--header-height) * 0.5);
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     width: fit-content;
     height: fit-content;
     cursor: pointer;
 }
 
-#menu-button-line, #menu-button-line::after, #menu-button-line:before {
+.menu-button-line {
     display: block;
     background-color: #fff;
     position: absolute;
     height: 4px;
     width: 35px;
     border-radius: 2px;
-}
-
-#menu-button-line::after {
-    content: '';
-    margin-top: 10px;
-}
-
-#menu-button-line::before {
-    content: '';
-    margin-top: -10px;
 }
 
 #menu-list {

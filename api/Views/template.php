@@ -11,7 +11,11 @@
     <header>
         <h1>Studeex</h1>
         <nav>
-            <div id="menu-button"><div id="menu-button-line"></div></div>
+            <div id="menu-button">
+                <div class="menu-button-line"></div>
+                <div class="menu-button-line"></div>
+                <div class="menu-button-line"></div>
+            </div>
             <ul id="menu-list">
                 <li><a href="/sobre">Sobre o projeto</a></li>
                 <li><a href="/contato">Contato</a></li>
