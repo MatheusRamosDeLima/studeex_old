@@ -31,7 +31,3 @@
         <input type="number" name="hours-per-day" id="input-hours-per-day" min="1" max="8">
     </div>
 </form>
-<?php
-    $data = $this->getData();
-    print_r($data);
-?>
