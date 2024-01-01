@@ -13,7 +13,7 @@
         }
         protected function loadViewInTemplate($view, $modelData = array()) {
             if (!empty($modelData)) {
-                if (count($this->data) > 0) array_merge($this->data, $modelData);
+                if (count($this->data) > 0) array_push($this->data, $modelData);
                 else $this->data = $modelData;
             }
             require_once $_SERVER['DOCUMENT_ROOT']."/api/Views/pages/$view.php";
