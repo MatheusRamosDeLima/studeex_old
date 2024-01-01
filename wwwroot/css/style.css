@@ -34,23 +34,17 @@ header h1 {
 }
 
 #menu-button {
-    left: 20px;
-    top: calc(var(--header-height) * 0.5);
-    position: absolute;
+    width: 35px;
+    height: 22px;
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
+    gap: 5px;
 }
 
-.menu-button-line {
-    display: block;
-    background-color: #fff;
-    position: absolute;
-    height: 4px;
+#menu-button div {
     width: 35px;
+    height: 4px;
+    background-color: white;
     border-radius: 2px;
 }
 
