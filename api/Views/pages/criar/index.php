@@ -17,7 +17,7 @@
             <option class="difficulty-option">Muito ruim</option>
         </select>
     </div>
-    <?php $this->loadViewInTemplate("criar/$systemType", [$systemType.'_teste']) ?>
+    <?php $this->loadViewInTemplate("criar/$systemType", ['TipoDoSistema' => $systemType.'_teste']) ?>
     <input type="button" value="Adicionar conteúdo">
 </form>
 <section>
