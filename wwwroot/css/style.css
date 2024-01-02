@@ -34,6 +34,11 @@ header h1 {
     height: fit-content;
 }
 
+#header-title {
+    color: white;
+    text-decoration: none;
+}
+
 #menu-button {
     width: fit-content;
     height: fit-content;

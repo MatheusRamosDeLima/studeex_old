@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <h1>Studeex</h1>
+        <a href="/" id="header-title"><h1>Studeex</h1></a>
         <nav>
             <div id="menu-button" onclick="clickMenuButton()"><div></div><div></div><div></div></div>
             <ul id="menu-list">
