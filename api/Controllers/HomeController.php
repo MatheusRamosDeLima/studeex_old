@@ -2,6 +2,7 @@
     class HomeController extends Controller {
         public function index():void {
             $this->setStyle('home');
+            $this->setScript('home');
             $this->setTitle('Studeex: Facilite a organização dos seus estudos');
             $this->loadTemplate('home');
         }
