@@ -27,16 +27,16 @@ header {
     align-items: center;
 }
 
-header h1 {
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 40px;
-    height: fit-content;
-}
-
 #header-title {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
     color: white;
     text-decoration: none;
+}
+
+#header-title h1 {
+    font-size: 40px;
 }
 
 #menu-button {
