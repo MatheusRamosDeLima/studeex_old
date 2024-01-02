@@ -1,10 +1,14 @@
 <?php
     class Controller {
         private $data;
+        private string $style;
+        private string $script;
         private string $title;
 
         public function __construct() {
             $this->data = array();
+            $this->style = '';
+            $this->script = '';
             $this->title = '';
         }
 
@@ -21,6 +25,20 @@
 
         public function getData() {
             return $this->data;
+        }
+
+        public function getStyle() {
+            return $this->style;
+        }
+        protected function setStyle(string $inputStyle) {
+            $this->style = $inputStyle;
+        }
+        
+        public function getScript() {
+            return $this->script;
+        }
+        protected function setScript(string $inputScript) {
+            $this->script = $inputScript;
         }
 
         public function getTitle() {
