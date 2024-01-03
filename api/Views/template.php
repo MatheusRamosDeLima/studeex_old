@@ -25,7 +25,9 @@
         </nav>
     </header>
     <main>
-        <?php $this->loadViewInTemplate($view, $modelData) ?>
+        <div id="main-content">
+            <?php $this->loadViewInTemplate($view, $modelData) ?>
+        </div>
     </main>
     <footer>
         <p id="copyright">Copyright, Studeex - 2024</p>

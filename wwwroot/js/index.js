@@ -1,7 +1,7 @@
 const menuList = document.querySelector('#menu-list');
-const mainSection = document.getElementsByTagName('main')[0];
+const mainContent = document.querySelector('#main-content');
 
 function clickMenuButton() {
     menuList.classList.toggle('list-visible');
-    mainSection.classList.toggle('list-visible');
+    mainContent.classList.toggle('list-visible');
 }

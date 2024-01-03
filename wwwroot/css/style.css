@@ -88,12 +88,16 @@ main {
     min-height: var(--main-height);
     background-color: var(--main-bg-color);
     width: 100vw;
+}
+
+#main-content {
+    width: 100vw;
     position: absolute;
     right: 0;
     top: var(--header-height);
 }
 
-main.list-visible {
+#main-content.list-visible {
     width: calc(100vw - var(--menu-list-width));
 }
 
