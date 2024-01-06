@@ -95,12 +95,17 @@ main {
     justify-content: end;
 }
 
-#main-content {
+#main-content, #main-content.list-visible {
     width: 100vw;
 }
 
-#main-content.list-visible {
-    width: calc(100vw - var(--menu-list-width));
+@media only screen and (min-width: 900px) {
+    #main-content {
+        width: 100vw;
+    }
+    #main-content.list-visible {
+        width: calc(100vw - var(--menu-list-width));
+    }
 }
 
 footer {
