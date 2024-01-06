@@ -1,9 +1,8 @@
 #main-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 #choose-system {
@@ -44,4 +43,6 @@
     padding: 15px;
     background-color: var(--medium-bg-color);
     border-radius: 10px;
+    width: 100%;
+    min-height: 200px;
 }
