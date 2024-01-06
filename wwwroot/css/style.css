@@ -91,10 +91,16 @@ main {
     min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
     margin-top: var(--header-height);
     background-color: var(--weak-bg-color);
+    display: flex;
+    justify-content: end;
 }
 
 #main-content {
     width: calc(100vw - var(--menu-list-width));
+}
+
+#main-content.list-visible {
+    width: 100vw;
 }
 
 footer {
