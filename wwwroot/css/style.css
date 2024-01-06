@@ -10,7 +10,7 @@
     --strong-bg-color: #181818;
     --medium-bg-color: #202020;
     --weak-bg-color: #252525;
-    --menu-list-width: 42vw;
+    --menu-list-width: 60vw;
     --main-height: calc(100vh - (var(--header-height) + var(--footer-height)));
 }
 
@@ -97,6 +97,12 @@ main {
 
 #main-content, #main-content.list-visible {
     width: 100vw;
+}
+
+@media only screen and (min-width: 575px) {
+    :root {
+        --menu-list-width: 42vw;
+    }
 }
 
 @media only screen and (min-width: 900px) {
