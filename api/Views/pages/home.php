@@ -6,7 +6,7 @@
             <h2>Rotina de Estudos</h2>
         </a>
         <a href="/criar/ciclo">
-            <img src="" alt="Ícone de ciclo">
+            <img src="/imgs/icons/home/ciclo.png" alt="Ícone de ciclo">
             <h2>Ciclo de Estudos</h2>
         </a>
     </div>
