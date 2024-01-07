@@ -2,7 +2,7 @@
     <h1>Escolha o que deseja criar:</h1>
     <div id="systems-create">
         <a href="/criar/rotina">
-            <img src="" alt="Ícone de rotina">
+            <img src="/imgs/icons/home/rotina.png" alt="Ícone de rotina">
             <h2>Rotina de Estudos</h2>
         </a>
         <a href="/criar/ciclo">
