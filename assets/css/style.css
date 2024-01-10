@@ -130,10 +130,12 @@ footer {
 #dark-background-div {
     position: fixed;
     top: var(--header-height);
-    left: 0;
-    width: 100vw;
+    right: 0;
+    width: calc(100vw - var(--menu-list-width));
     display: none;
-}
+    height: calc(100vh - var(--header-height));
+    background-color: rgba(0, 0, 0, .6);
+}    
 
 #dark-background-div.list-visible {
     display: block;
