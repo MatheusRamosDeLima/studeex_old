@@ -19,8 +19,14 @@
         <nav>
             <div id="menu-button" onclick="clickMenuButton()"><div></div><div></div><div></div></div>
             <ul id="menu-list">
-                <li><a href="/sobre">Sobre o projeto</a></li>
-                <li><a href="/contato">Contato</a></li>
+                <li><a href="/sobre">
+                    <img src="/assets/imgs/icons/geral/sobre.png" alt="Ícone: Sobre o projeto" class="list-icon">
+                    <span class="list-name">Sobre o projeto</span>
+                </a></li>
+                <li><a href="/contato">
+                    <img src="/assets/imgs/icons/geral/contato.png" alt="Ícone: Contato" class="list-icon">
+                    <span class="list-name">Contato</span>
+                </a></li>
             </ul>
         </nav>
     </header>
