@@ -88,6 +88,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    text-decoration: none;
 }
 
 #menu-list a .list-icon {
@@ -96,7 +97,6 @@ header {
 
 #menu-list a .list-name {
     color: white;
-    text-decoration: none;
 }
 
 main {
