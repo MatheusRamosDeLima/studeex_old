@@ -159,6 +159,7 @@ footer {
 
     #menu-list {
         display: flex;
+        min-width: 200px;
     }
 
     #menu-list.list-visible {
