@@ -38,5 +38,6 @@
     <footer>
         <p id="copyright">Copyright, Studeex - 2024</p>
     </footer>
+    <div id="dark-background-div" onclick="clickDarkBackgroundDiv()"></div>
 </body>
 </html>
