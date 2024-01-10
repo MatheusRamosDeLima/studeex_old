@@ -144,7 +144,7 @@ main {
     }
 
     #main-content {
-        width: 100vw;
+        width: calc(100vw - 65px);
     }
     #main-content.list-visible {
         width: calc(100vw - var(--menu-list-width));
