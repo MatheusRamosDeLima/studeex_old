@@ -99,6 +99,10 @@ header {
     color: white;
 }
 
+#menu-list a .list-name, #menu-list a .list-name.list-visible {
+    display: block;
+}
+
 main {
     min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
     margin-top: var(--header-height);
@@ -134,7 +138,7 @@ main {
         display: none;
     }
 
-    #menu-list.list-visible ~ #menu-list a .list-name {
+    #menu-list a .list-name.list-visible {
         display: block;
     }
 
