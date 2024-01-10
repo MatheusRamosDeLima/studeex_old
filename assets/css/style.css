@@ -164,6 +164,7 @@ footer {
 
     #menu-list.list-visible {
         width: var(--menu-list-width);
+        min-width: 0;
     }
 
     #menu-list a .list-name {
