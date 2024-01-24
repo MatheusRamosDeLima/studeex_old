@@ -19,7 +19,10 @@ class Core {
 
         print_r($this->uri);
 
-        $this->configControllerMethodParams($this->uri, $this->controller, $this->method, $this->paramethers);
+        $controllerMethodParams = $this->configControllerMethodParams($this->uri);
+        $this->controller = $controllerMethodParams['controller'];
+        $this->method = $controllerMethodParams['method'];
+        $this->paramethers = $controllerMethodParams['paramethers'];
 
         echo "<h1>Teste do resultado do método <em>configControllerMethodParams()</em></h1>";
         echo "<p>Controller: {$this->controller}</p>";
@@ -43,7 +46,7 @@ class Core {
 
         return $uri;
     }
-    private function configControllerMethodParams(array $uri, null $controller, null $method, null $paramethers) {
+    private function configControllerMethodParams($uri) {
         if (!empty($uri[0])) {
             $controller = ucfirst(strtolower($uri[0])).'Controller';
             array_shift($uri);
@@ -68,5 +71,7 @@ class Core {
             $method = 'index';
             $paramethers = [];
         }
+
+        return ['controller' => $controller, 'method' => $method, 'paramethers' => $paramethers];
     }
 }
