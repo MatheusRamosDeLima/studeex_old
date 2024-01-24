@@ -25,13 +25,12 @@ class Core {
     private function run() {
         $this->uri = $this->defineURI();
 
-        $controllerMethodParams = $this->configControllerMethodParams($this->uri);
+        $controllerMethodParams = $this->configControllerMethodParams($this->getUri());
         $this->controller = $controllerMethodParams['controller'];
         $this->method = $controllerMethodParams['method'];
         $this->paramethers = $controllerMethodParams['paramethers'];
 
-        $callController = new $this->controller;
-        call_user_func_array(array($callController, $this->method), $this->paramethers);
+        $this->callMethodOfController($this->getController(), $this->getMethod(), $this->getParamethers());
     }
 
     private function defineURI():array {
@@ -69,5 +68,9 @@ class Core {
         }
 
         return ['controller' => $controller, 'method' => $method, 'paramethers' => $paramethers];
+    }
+    private function callMethodOfController(string $controller, string $method, array $paramethers) {
+        $callController = new $controller;
+        call_user_func_array(array($callController, $method), $paramethers);
     }
 }
