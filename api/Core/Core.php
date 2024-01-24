@@ -17,6 +17,8 @@ class Core {
     private function run() {
         $this->uri = $this->defineURI($this->uri);
 
+        print_r($this->uri);
+
         $this->configControllerMethodParams($this->uri, $this->controller, $this->method, $this->paramethers);
 
         echo "<h1>Teste do resultado do método <em>configControllerMethodParams()</em></h1>";
