@@ -1,15 +1,15 @@
 <?php
     class Controller {
-        private $data;
-        private string $style;
-        private string $script;
-        private string $title;
+        private null|mysqli|mysqli_result|array $data;
+        private ?string $style;
+        private ?string $script;
+        private ?string $title;
 
         public function __construct() {
             $this->data = array();
-            $this->style = '';
-            $this->script = '';
-            $this->title = '';
+            $this->style = null;
+            $this->script = null;
+            $this->title = null;
         }
 
         protected function loadTemplate($view, $modelData = array()) {
