@@ -1,7 +1,7 @@
 <?php
 
 class Core {
-    private null|string|array $uri;
+    private ?array $uri;
     private ?string $controller;
     private ?string $method;
     private ?array $paramethers;
@@ -13,9 +13,17 @@ class Core {
         $this->paramethers = null;
         $this->run();
     }
+    public function getUri():?array { return $this->uri; }
+    public function setUri(?array $uri) { $this->uri = $uri; }
+    public function getController():?string { return $this->controller; }
+    public function setController(?string $controller) { $this->controller = $controller; }
+    public function getMethod():?string { return $this->method; }
+    public function setMethod(?string $method) { $this->method = $method; }
+    public function getParamethers():?array { return $this->paramethers; }
+    public function setParamethers(?array $paramethers) { $this->paramethers = $paramethers; }
 
     private function run() {
-        $this->uri = $this->defineURI($this->uri);
+        $this->uri = $this->defineURI();
 
         $controllerMethodParams = $this->configControllerMethodParams($this->uri);
         $this->controller = $controllerMethodParams['controller'];
@@ -26,7 +34,7 @@ class Core {
         call_user_func_array(array($callController, $this->method), $this->paramethers);
     }
 
-    private function defineURI($uri):array {
+    private function defineURI():array {
         $uri = trim($_SERVER['REQUEST_URI'], '/');
         if ($uri === 'index.php') $uri = '';
         else if (strpos($uri, "index.php/") === 0) $uri = substr($uri, strlen("index.php/"));

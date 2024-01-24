@@ -27,21 +27,21 @@
             return $this->data;
         }
 
-        public function getStyle() {
+        public function getStyle():?string {
             return $this->style;
         }
         protected function setStyle(string $inputStyle) {
             $this->style = $inputStyle;
         }
         
-        public function getScript() {
+        public function getScript():?string {
             return $this->script;
         }
         protected function setScript(string $inputScript) {
             $this->script = $inputScript;
         }
 
-        public function getTitle() {
+        public function getTitle():?string {
             return $this->title;
         }
         protected function setTitle(string $titleValue) {
