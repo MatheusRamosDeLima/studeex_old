@@ -17,22 +17,10 @@ class Core {
     private function run() {
         $this->uri = $this->defineURI($this->uri);
 
-        print_r($this->uri);
-
         $controllerMethodParams = $this->configControllerMethodParams($this->uri);
         $this->controller = $controllerMethodParams['controller'];
         $this->method = $controllerMethodParams['method'];
         $this->paramethers = $controllerMethodParams['paramethers'];
-
-        echo "<h1>Teste do resultado do método <em>configControllerMethodParams()</em></h1>";
-        echo "<p>Controller: {$this->controller}</p>";
-        echo "<p>Método: {$this->method}</p>";
-        if (!empty($this->paramethers)) {
-            echo "<p>Paramethers:</p>";
-            foreach ($this->paramethers as $i => $p) {
-                echo "<p>P$i: $p</p>";
-            }
-        }
 
         $callController = new $this->controller;
         call_user_func_array(array($callController, $this->method), $this->paramethers);
