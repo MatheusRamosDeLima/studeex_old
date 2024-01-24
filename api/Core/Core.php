@@ -34,12 +34,12 @@ class Core {
     }
 
     private function defineURI():array {
-        $uri = trim($_SERVER['REQUEST_URI'], '/');
-        if ($uri === 'index.php') $uri = '';
-        else if (strpos($uri, "index.php/") === 0) $uri = substr($uri, strlen("index.php/"));
-        $uri = explode('/', $uri);
+        $stringUri = trim($_SERVER['REQUEST_URI'], '/');
+        if ($stringUri === 'index.php') $stringUri = '';
+        else if (strpos($stringUri, "index.php/") === 0) $stringUri = substr($stringUri, strlen("index.php/"));
+        $arrayUri = explode('/', $stringUri);
 
-        return $uri;
+        return $arrayUri;
     }
     private function configControllerMethodParams($uri) {
         if (!empty($uri[0])) {
