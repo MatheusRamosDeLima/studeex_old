@@ -19,6 +19,16 @@ class Core {
 
         $this->configControllerMethodParams($this->uri, $this->controller, $this->method, $this->paramethers);
 
+        echo "<h1>Teste do resultado do método <em>configControllerMethodParams()</em></h1>";
+        echo "<p>Controller: {$this->controller}</p>";
+        echo "<p>Método: {$this->method}</p>";
+        if (!empty($this->paramethers)) {
+            echo "<p>Paramethers:</p>";
+            foreach ($this->paramethers as $i => $p) {
+                echo "<p>P$i: $p</p>";
+            }
+        }
+
         $callController = new $this->controller;
         call_user_func_array(array($callController, $this->method), $this->paramethers);
     }
