@@ -17,7 +17,7 @@ class Core {
     private function run() {
         $this->uri = $this->defineURI($this->uri);
 
-        $this->configControllerMethodAndParams($this->uri, $this->controller, $this->method, $this->paramethers);
+        $this->configControllerMethodParams($this->uri, $this->controller, $this->method, $this->paramethers);
 
         $callController = new $this->controller;
         call_user_func_array(array($callController, $this->method), $this->paramethers);
@@ -31,7 +31,7 @@ class Core {
 
         return $uri;
     }
-    private function configControllerMethodAndParams(array $uri, string $controller, string $method, array $paramethers) {
+    private function configControllerMethodParams(array $uri, null $controller, null $method, null $paramethers) {
         if (!empty($uri[0])) {
             $controller = ucfirst(strtolower($uri[0])).'Controller';
             array_shift($uri);
