@@ -1,12 +1,16 @@
 <?php
 
 class Core {
-    private string|array $uri;
-    private string $controller;
-    private string $method;
-    private array $paramethers;
+    private null|string|array $uri;
+    private ?string $controller;
+    private ?string $method;
+    private ?array $paramethers;
 
     public function __construct() {
+        $this->uri = null;
+        $this->controller = null;
+        $this->method = null;
+        $this->paramethers = null;
         $this->run();
     }
 
